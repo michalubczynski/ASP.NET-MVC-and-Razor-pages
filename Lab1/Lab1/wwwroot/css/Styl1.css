@@ -1,0 +1,17 @@
+﻿BODY {
+    text-align:left
+}
+a:link, a:visited,a:active{
+    text-decoration:none;
+    color:black
+}
+a:hover{
+    text-decoration:underline;
+    color:orange
+}
+input[type=text]{
+    background-color:grey
+}
+input::after:enabled {
+    color: yellow
+}
