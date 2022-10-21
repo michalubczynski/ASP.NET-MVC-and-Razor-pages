@@ -1,6 +1,10 @@
 ﻿BODY {
-    text-align:left
+    text-align: left;
+    background-repeat: repeat-y;
+    background-image: url('../Strony/Grafika/Skoroszyt.png');
+    margin-left:200px;
 }
+
 a:link, a:visited,a:active{
     text-decoration:none;
     color:black
@@ -14,4 +18,14 @@ input[type=text]{
 }
 input::after:enabled {
     color: yellow
+}
+.klasa1{
+    margin-left:5px;
+    width:200px;
+    position:relative
+}
+.klasa2 {
+    margin-left: 100px;
+    width: 200px;
+    position: relative
 }

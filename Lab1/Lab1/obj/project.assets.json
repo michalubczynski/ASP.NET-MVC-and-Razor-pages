@@ -8,23 +8,25 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Majkel\\.nuget\\packages\\": {},
-    "D:\\VS\\NuGetPackages": {}
+    "C:\\Users\\Student\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Majkel\\Documents\\GitHub\\Tworzenie_Interfejsow_Uzytkownika\\Lab1\\Lab1\\Lab1.csproj",
+      "projectUniqueName": "C:\\Users\\Student\\Downloads\\Tworzenie_Interfejsow_Uzytkownika\\Lab1\\Lab1\\Lab1.csproj",
       "projectName": "Lab1",
-      "projectPath": "C:\\Users\\Majkel\\Documents\\GitHub\\Tworzenie_Interfejsow_Uzytkownika\\Lab1\\Lab1\\Lab1.csproj",
-      "packagesPath": "C:\\Users\\Majkel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Majkel\\Documents\\GitHub\\Tworzenie_Interfejsow_Uzytkownika\\Lab1\\Lab1\\obj\\",
+      "projectPath": "C:\\Users\\Student\\Downloads\\Tworzenie_Interfejsow_Uzytkownika\\Lab1\\Lab1\\Lab1.csproj",
+      "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Student\\Downloads\\Tworzenie_Interfejsow_Uzytkownika\\Lab1\\Lab1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\VS\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Majkel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -33,7 +35,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -57,8 +58,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -70,7 +70,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
