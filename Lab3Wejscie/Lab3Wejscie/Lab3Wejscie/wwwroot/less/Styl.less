@@ -1,0 +1,32 @@
+﻿@jakisKolor: #000000;
+@jakisKolorTla: #ffd800;
+
+
+#header {
+    h1 {
+        font-size: 56px;
+        font-weight: bold;
+    }
+    p { // przyklad zagniezdzonych stylow blokow
+        font-size: 12px;
+
+        a {
+            text-decoration: none;
+
+            &:hover {
+                border-width: 1px
+            }
+        }
+    }
+}
+#less{
+    color:#ff6a00;
+}
+body {
+    background: desaturate(@jakisKolorTla, 80%);
+    letter-spacing: 10px;
+    .domieszkatekstu(@jakisKolor);
+}
+.domieszkatekstu (@kolor){
+    color:@kolor;
+}

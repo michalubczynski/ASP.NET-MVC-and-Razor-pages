@@ -1,0 +1,16 @@
+﻿h1 {
+  background-color: salmon;
+  background-color: #004080;
+  background-color: #004d99;
+  background-color: #0059b3;
+  color: #036;
+}
+
+#sass, #sass2 {
+  color: red;
+  font-size: larger;
+}
+
+#sass2 {
+  background-color: #808080;
+}

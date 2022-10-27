@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "wwwroot/less/Styl.css",
+    "inputFile": "wwwroot/less/Styl.less"
+  },
+  {
+    "outputFile": "wwwroot/Sass/StyleSheet.css",
+    "inputFile": "wwwroot/Sass/StyleSheet.scss"
+  }
+]

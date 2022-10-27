@@ -1,0 +1,28 @@
+﻿$bg:#808080;
+$base_color: #036;
+@mixin domieszka($kolorTekstu, $kolorTla, $light_theme: true) {
+    @if $light_theme {
+        background-color: salmon;
+        @for $i from 1 through 3 {
+            background-color: lighten($base_color, $i * 5%);
+        }
+        color: $base_color;
+    }
+    @else {
+        background-color: $kolorTla;
+        color: $kolorTekstu;
+    }
+}
+h1 {
+    @include domieszka(black,white);
+}
+#sass{
+    color:red;
+    font-size:larger;
+}
+#sass2{
+   @extend #sass;
+   background-color:$bg;
+}
+
+
