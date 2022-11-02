@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Majkel\\Documents\\GitHub\\Tworzenie_Interfejsow_Uzytkownika\\Lab1\\Lab1\\Lab1.csproj": {}
+    "C:\\Users\\Majkel\\Documents\\GitHub\\Tworzenie_Interfejsow_Uzytkownika\\ProjectToDevelop\\Lab1\\Lab1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Majkel\\Documents\\GitHub\\Tworzenie_Interfejsow_Uzytkownika\\Lab1\\Lab1\\Lab1.csproj": {
+    "C:\\Users\\Majkel\\Documents\\GitHub\\Tworzenie_Interfejsow_Uzytkownika\\ProjectToDevelop\\Lab1\\Lab1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Majkel\\Documents\\GitHub\\Tworzenie_Interfejsow_Uzytkownika\\Lab1\\Lab1\\Lab1.csproj",
+        "projectUniqueName": "C:\\Users\\Majkel\\Documents\\GitHub\\Tworzenie_Interfejsow_Uzytkownika\\ProjectToDevelop\\Lab1\\Lab1.csproj",
         "projectName": "Lab1",
-        "projectPath": "C:\\Users\\Majkel\\Documents\\GitHub\\Tworzenie_Interfejsow_Uzytkownika\\Lab1\\Lab1\\Lab1.csproj",
+        "projectPath": "C:\\Users\\Majkel\\Documents\\GitHub\\Tworzenie_Interfejsow_Uzytkownika\\ProjectToDevelop\\Lab1\\Lab1.csproj",
         "packagesPath": "C:\\Users\\Majkel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Majkel\\Documents\\GitHub\\Tworzenie_Interfejsow_Uzytkownika\\Lab1\\Lab1\\obj\\",
+        "outputPath": "C:\\Users\\Majkel\\Documents\\GitHub\\Tworzenie_Interfejsow_Uzytkownika\\ProjectToDevelop\\Lab1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\VS\\NuGetPackages"
