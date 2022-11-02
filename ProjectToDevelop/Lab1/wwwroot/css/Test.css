@@ -1,0 +1,12 @@
+﻿body {
+    background-color:darkcyan;
+}
+#panelDaty {
+position:fixed;
+height:40px;
+width:400px;
+right:0px;
+top:0px;
+border:double;
+background-color:yellow;
+}

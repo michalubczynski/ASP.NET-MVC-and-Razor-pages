@@ -1,0 +1,60 @@
+﻿@najasno:true;
+
+.motyw() when (@najasno = true){
+    background-color:sandybrown;
+    color:black;
+}
+.motyw() when (@najasno = false) {
+    background-color: darkblue;
+    color: black;
+}
+.zmien()when (@najasno = false){
+    @najasno:true;
+}
+/*button{
+    @najasno:true;
+    .motyw();
+}
+button:hover{
+    @najasno:false;
+    .motyw();
+}*/
+BODY {
+    text-align: left;
+    background-repeat: repeat-y;
+    background-image: url('../Strony/Grafika/Skoroszyt.png');
+    margin-left: 300px;
+    .motyw()
+}
+
+a:link, a:visited, a:active {
+    text-decoration: none;
+    color: black
+}
+
+a:hover {
+    text-decoration: underline;
+    color: orange;
+    .zmien();
+    .motyw();
+}
+
+input[type=text] {
+    background-color: grey
+}
+
+input::after:enabled {
+    color: yellow
+}
+
+.klasa1 {
+    margin-left: 5px;
+    width: 200px;
+    position: relative
+}
+
+.klasa2 {
+    margin-left: 100px;
+    width: 200px;
+    position: relative
+}
