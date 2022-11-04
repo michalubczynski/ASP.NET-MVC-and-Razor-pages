@@ -1,0 +1,29 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+#Stage1{
+    background-color:burlywood;
+    width:1000px;
+    height:1000px;
+    position:absolute;
+}
+#postac{
+    height:300px;
+    width:300px;
+    position:absolute;
+}
