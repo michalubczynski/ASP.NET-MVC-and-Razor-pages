@@ -1,0 +1,30 @@
+
+
+@media (min-width: 768px) {
+}
+
+html {
+  position: absolute;
+  min-height: 100%;
+    font-size: 14px;
+}
+
+body {
+  margin-bottom: 60px;
+}
+#Stage1{
+    background-color:burlywood;
+    width:1600px;
+    height:700px;
+    position:absolute;
+}
+#postac{
+    height:300px;
+    width:300px;
+    position:absolute;
+} 
+#przeciwnikPelzajacy{
+    height:10%;
+    width:5%;
+    position:absolute;
+}
