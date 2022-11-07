@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>test</title>
+    <!--        <link rel="stylesheet" href="../../css/Styl1.css" type="text/css">
+            <link rel="stylesheet/less" type="text/css" href="../../less/Start.less" />
+            <script src="https://cdn.jsdelivr.net/npm/less"></script>-->
+
+    <link rel="stylesheet" href="../../css/Test.css" type="text/css">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+        function removeSpaces(val) {
+            return val.split(' ').join('');
+        }
+        pyt1 = removeSpaces(document.getElementById('pyt1').value.toLowerCase());
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                let punktacja = 0;
+                let ocena = 1;
+                let pyt1 = "";
+                if ($("#pyt1").val() == "dobrze") {punktacja++ }
+                if ($("#pyt2_1").is(':checked')) {puntacja ++ }
+            });
+            $("#wynik").append('Punktacja:' + punktacja.toFixed(2));
+        });
+
+    </script>
+
+</head>
+<body>
+    <a href="../start.html">Start</a>
+    <h1>Czy znasz moj wymarzony pojazd</h1>
+    <div id="panelDaty">
+
+        Aktualna data:
+        <script type="text/javascript" language="JavaScript">
+
+            var d = new Date()
+            document.write(d.toLocaleString())
+
+        </script>
+        </br>Aktualny dzien tygodnia:
+        <script type="text/javascript" language="JavaScript">
+            var d = new Date()
+            var nazwy_dni = ['Niedziela', 'Poniedziałek', 'Wtorek', 'Środa', 'Czwartek',
+                'Piątek', 'Sobota'];
+            var dzien = d.getDay();
+            document.write(nazwy_dni[dzien]);
+        </script>
+    </div>
+    <form id="formularz">
+        <table border="1">
+            <centre>
+                <tr>
+                    <td>
+                        Lp.
+                    </td>
+                    <td>
+                        Pytanie
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        1.
+                    </td>
+                    <td>
+                        Forma jazdy (np. latajacy):
+                        <input type="text" id="pyt1" value="Naziemny" /><br />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        2.
+                    </td>
+                    <td>
+                        Marka:<br />
+                        <input type="radio" id="pyt2_1" name="pyt2" value="BMW" checked="checked">BMW<br />
+                        <input type="radio" id="pyt2_2" name="pyt2" value="AUDI">AUDI<br />
+                        <input type="radio" id="pyt2_3" name="pyt2" value="VW">VW<br />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        3.
+                    </td>
+                    <td>
+                        Jak ma wyglądać wnętrze:<img src="../Grafika/Q.png" height="20" />
+                        <textarea id ="pyt3" name="pyt3" value=""> </textarea><br />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        4.
+                    </td>
+                    <td>
+                        Paliwo:
+                        <select id="pyt4">
+                            <option value="Benzin">Benzyna</option>
+                            <option value="Diesel">Diesel</option>
+                            <option value="Hybrid">Hybryda</option>
+                        </select><br />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        5.
+                    </td>
+                    <td>
+                        Skrzynia:
+                        <select id="pyt5" name="pyt5" value="" size=" 3">
+                            <option value="Manual">Manual</option>
+                            <option value="Automat">Automat</option>
+                            <option value="Semi-Automat">Semi-Automat</option>
+                        </select><br />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        6.
+                    </td>
+                    <td>
+                        Silnik:
+                        <select id="pyt6" name="pyt6" value="" multiple="multiple">
+                            <option value="Maly">Maly</option>
+                            <option value="Sredni">Sredni</option>
+                            <option value="Duzy">Duzy</option>
+                            <option value="Ogromny">Ogromny</option>
+                            <option value="Potezny">Potężny</option>
+                            <option value="19TDI">1.9TDI</option>
+                        </select><br />
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        7.
+                    </td>
+                    <td>
+                        Marka:<br />
+                        <input type="checkbox" id="pyt7_1" name="pyt7" value="Opony" checked="checked">Zimowe<br />
+                        <input type="checkbox" id="pyt7_2" name="pyt7" value="Opony" checked="checked">Letnie<br />
+                        <input type="checkbox" name="pyt7" value="Opony">Wielosezon<br />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        8.
+                    </td>
+                    <td>
+                        Marka:<br />
+                        <input type="checkbox" id="pyt8_1" name="pyt8" value="Stalówki" checked="checked">Stalówki<br />
+                        <input type="checkbox" id="pyt8_2" name="pyt8" value="Alufelgi" checked="checked">Alufelgi<br />
+                        <input type="checkbox" name="pyt8" value="FelgiStrukturalne">FelgiStrukturalne<br />
+                    </td>
+                </tr>
+            </centre>
+        </table>
+
+
+        <input type="button" onclick="Sprawdz()" value="Sprawdz">
+        <span id="wynik" style=" background-color:yellow">TU wynik: </span>
+    </form>
+
+
+</body>
+</html>
