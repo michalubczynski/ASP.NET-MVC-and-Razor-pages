@@ -1,0 +1,57 @@
+
+
+@media (min-width: 768px) {
+}
+
+html {
+  position: absolute;
+  min-height: 100%;
+    font-size: 14px;
+}
+
+#Stage1{
+    background-color:burlywood;
+    width:1600px;
+    height:1000px;
+    position:absolute;
+}
+#postac{
+    height:100px;
+    width:100px;
+    position:absolute;
+} 
+#przeciwnikPelzajacy{
+    height:10%;
+    width:5%;
+    bottom:100px;
+    right:100px;
+    position:absolute;
+}
+#przeciwnikJezdzacy {
+    height: 10%;
+    width: 5%;
+    top: 0px;
+    left: 700px;
+    position: absolute;
+}
+#meta{
+    position:absolute;
+    right:0px;
+    top:0px;
+    width:100px;
+    height:1000px;
+    background-color:red;
+}
+#punktacja{
+    position:fixed;
+    top:0px;
+    right:0px;
+    width:250px;
+    height:120px;
+    background-color:aqua;
+    color:black;
+    border:double;
+    border-color:black;
+    z-index:100;
+    font-size: 50px;
+}
