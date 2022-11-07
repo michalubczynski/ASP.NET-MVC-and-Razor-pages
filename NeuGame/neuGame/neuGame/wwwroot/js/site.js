@@ -100,8 +100,8 @@ function PotworJezdzacy() {
 	if (czyWdol == true) {
 		y_PotworJ += 30;
 		if (y_PotworJ >= 900) {
-        }
 			czyWdol = false;
+        }
 	}
 	if (czyWdol == false ) {
 		y_PotworJ -= 30;

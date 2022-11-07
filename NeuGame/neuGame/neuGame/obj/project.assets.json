@@ -8,23 +8,23 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Majkel\\.nuget\\packages\\": {},
-    "D:\\VS\\NuGetPackages": {}
+    "C:\\Users\\micha\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Majkel\\Documents\\GitHub\\Tworzenie_Interfejsow_Uzytkownika\\NeuGame\\neuGame\\neuGame\\neuGame.csproj",
+      "projectUniqueName": "C:\\Users\\micha\\Documents\\GitHub\\Tworzenie_Interfejsow_Uzytkownika\\NeuGame\\neuGame\\neuGame\\neuGame.csproj",
       "projectName": "neuGame",
-      "projectPath": "C:\\Users\\Majkel\\Documents\\GitHub\\Tworzenie_Interfejsow_Uzytkownika\\NeuGame\\neuGame\\neuGame\\neuGame.csproj",
-      "packagesPath": "C:\\Users\\Majkel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Majkel\\Documents\\GitHub\\Tworzenie_Interfejsow_Uzytkownika\\NeuGame\\neuGame\\neuGame\\obj\\",
+      "projectPath": "C:\\Users\\micha\\Documents\\GitHub\\Tworzenie_Interfejsow_Uzytkownika\\NeuGame\\neuGame\\neuGame\\neuGame.csproj",
+      "packagesPath": "C:\\Users\\micha\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\micha\\Documents\\GitHub\\Tworzenie_Interfejsow_Uzytkownika\\NeuGame\\neuGame\\neuGame\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\VS\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Majkel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\micha\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -33,7 +33,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
