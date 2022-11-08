@@ -10,19 +10,18 @@
     <link rel="stylesheet" href="../../css/Test.css" type="text/css">
     <script type="text/javascript" src="jquery.js"></script>
     <script type="text/javascript">
-        function removeSpaces(val) {
-            return val.split(' ').join('');
-        }
-        pyt1 = removeSpaces(document.getElementById('pyt1').value.toLowerCase());
+        let punktacja = 0;
         $(document).ready(function () {
             $("#btn").click(function () {
-                let punktacja = 0;
-                let ocena = 1;
-                let pyt1 = "";
-                if ($("#pyt1").val() == "dobrze") {punktacja++ }
-                if ($("#pyt2_1").is(':checked')) {puntacja ++ }
+                if ($("#pyt1").val() == "Naziemny") punktacja += 1;
+                if ($("#pyt2_1").select()) punktacja += 1;
+                $("#wynik").text(punktacja);
+                alert("Twoj wynik:"+ punktacja);
+                punktacja = 0;
+                $("#formularz")[0].reset();
+                $("#wynik").text("Wynik:");
+
             });
-            $("#wynik").append('Punktacja:' + punktacja.toFixed(2));
         });
 
     </script>
@@ -158,7 +157,7 @@
         </table>
 
 
-        <input type="button" onclick="Sprawdz()" value="Sprawdz">
+        <button type="button" id="btn">SPRAWDZ</button>
         <span id="wynik" style=" background-color:yellow">TU wynik: </span>
     </form>
 
