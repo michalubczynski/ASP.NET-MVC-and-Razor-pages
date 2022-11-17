@@ -1,0 +1,78 @@
+﻿@page "/Walec"
+@model Razor.Pages.WalecModel
+@using System.Text.RegularExpressions
+<body>
+    <table>
+    <form method="get">
+            walec<input type="radio" name="bryla" id="walec" value="walec" /><br />
+            stozek<input type="radio" name="bryla" id="stozek" value="stozek" /><br />
+            x2stozek<input type="radio" name="bryla" id="x2stozek" value="x2stozek" /><br />
+            <tr>
+        Wysokosc<input type="text" name="wysokosc" value="2"><br />
+            </tr>
+            <tr>
+        Promien <input type="text" name="promien" value="2"><br />
+            </tr>
+            <tr>
+        <button type="submit">Oblicz</button>
+            </tr>
+    </form>
+        @{
+
+            if(Request.Query.Count > 0 ){
+                string h, r;
+                double v = 0;
+                h = (Request.Query["wysokosc"]).ToString();
+                r = (Request.Query["promien"]).ToString();
+
+                Regex parzystosc = new Regex(@"^[1-9]*[02468]$");
+                Regex calkowite = new Regex(@"^[1-9]*[0-9]$");
+
+                if (calkowite.IsMatch(h) && parzystosc.IsMatch(h) && calkowite.IsMatch(r))
+                {
+                    int r_ = Convert.ToInt32(r);
+                    int h_ = Convert.ToInt32(h);
+
+
+                if(Request.Query.ContainsKey("bryla")){
+                    if(Request.Query["bryla"] == "walec"){
+                            v = Math.PI * Math.Pow(r_, 2) * h_;
+                            <tr>
+                                Objetosc: @v.ToString("F2") cm
+                            </tr>
+                    }
+                        if (Request.Query["bryla"] == "stozek")
+                        {
+                            v =  (1 / 3.0) * Math.PI* Math.Pow(r_, 2) * h_;
+                            <tr>
+                                Objetosc: @v.ToString("F2") cm
+                            </tr>
+                        }
+                        if (Request.Query["bryla"] == "x2stozek")
+                        {
+                            v = 2 * (1/3.0) *Math.PI * Math.Pow(r_, 2) * h_;
+                            <tr>
+                                Objetosc: @v.ToString("F2") cm
+                            </tr>
+                        }
+                }
+
+
+                }
+                else{
+                    <tr>
+                        Bledna wartosc danych
+                    </tr>
+                }
+
+
+
+            }
+
+        }
+    </table>
+
+    
+
+    </body>
+

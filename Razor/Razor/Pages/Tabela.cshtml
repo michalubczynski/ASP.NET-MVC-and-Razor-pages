@@ -1,0 +1,35 @@
+﻿@page "/Tabela"
+@model Razor.Pages.TabelaModel
+@{
+    int x = 1;
+    DateTime dateTime = DateTime.Now;
+    <p> @dateTime.ToString("dd.MM.yyyy")</p>
+    <table style="border:double">
+            @for (int i = 0; i < 6; i++)
+        {
+                    <tr>
+                    @for (int j = 0; j < 5; j++)
+                {
+                    if (x == dateTime.Day) {
+                            <td style="background-color:cadetblue">
+                                @x
+                            </td>
+                    }
+                    else
+                    {
+                            <td style="background-color:yellow">
+                                @x
+                            </td>
+                    }
+                    x++;
+
+                }
+                    
+                    </tr>
+        }
+
+
+
+    </table>
+}
+
