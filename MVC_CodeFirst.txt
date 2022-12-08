@@ -1,0 +1,43 @@
+1. Tworzysz modele czyli klasy pojedynczych instancji np Miasto i Wojewodztwo
+	2. Wewnatrz klasy "n" należy dodać [Table("Miasta")] oraz [Key] a takze 
+	public int? Klasa1Id { get; set; }
+	[ForeignKey(nameof(Klasa1Id))]
+	public Klasa1? Klasa1 { get; set; }
+        public void Configure(EntityTypeBuilder<KlasaN> builder)
+        {
+            builder.HasOne(s => s.Klasa1).WithMany(g => g.KlasyN).OnDelete(DeleteBehavior.Cascade);
+        }
+	3. Wewnatrz klasy "1" nalezy dodac [Table("Wojewodztwa")] oraz [Key] a takze
+       	public int Klasa1Id { get; set; }
+        public ICollection<KlasaN>? KlasyN { get; set; }
+4.Tworzymy Model DbCos
+	Dziedziczy on po DbContext wiec public class DbKraj : DbContext
+	public DbSet<Klasa1> Klasy1 { get; set; }
+        public DbSet<KlasaN> KlasyN { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("ConnectString");
+        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        }
+5. Tworzymy BazeDanych
+6. w Program.cs dodajemy fraze builder.Services.AddDbContext<DbCos>();
+7. Tworzymy migracje otwierajac konsole menadzera pakietow i wpisujac
+ 									Add-migration First 
+	a potem 
+									Update-database
+8.Tworzymy Kontroler wybierajac trzecia opcje z Dodawania nowego Kontrolera
+ i w kontrolerze :
+        public async Task<IActionResult> Index()
+        {
+            return View(await _context.Partie.Include(a => a.Poslowie).ToListAsync());
+        }
+
+NUGETY : 
+	EntityFrameworkCore
+	EntityFrameworkCore.Design
+	EntityFrameworkCore.SqlServer
+	EntityFrameworkCore.Tools
