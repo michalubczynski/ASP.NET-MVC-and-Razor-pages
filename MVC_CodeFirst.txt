@@ -41,3 +41,47 @@ NUGETY :
 	EntityFrameworkCore.Design
 	EntityFrameworkCore.SqlServer
 	EntityFrameworkCore.Tools
+
+W index
+Trzeba zmienic na ViewModel model 
+<a asp-action="Index" asp-route-id="@item.TowarId">Zaznacz</a> 
+
+<strong>Liczba Towarow</strong> @Model.CalkowitaLiczbaTowarow <strong> Srednia cena</strong> @Model.SredniaCena.ToString("#.##")
+
+        @foreach (var item in Model.Towary_) {
+            string styl = "background: grey";
+            if (item.TowarId == ViewBag.Id) { styl = "background : yellow"; }
+            
+            <tr style="@styl">
+	}
+a to są inne wlasciwosci poza tabelą wyswietlone po wybraniu przedmiotu
+@foreach (var item in Model.Towary_)
+{
+    if (item.TowarId == ViewBag.Id)
+    {
+        @item.Producent<br>
+        @item.Ilosc <strong>szt</strong><br>
+        @item.Cena<strong> zl</strong><br>
+    }
+
+}
+
+W ViewModel
+        public ICollection<Towar> Towary_ { get; set; }
+        public int CalkowitaLiczbaTowarow { get; set; }
+        public decimal SredniaCena { get; set; }
+
+W Kontrolerze
+
+        // GET: Towary
+        public async Task<IActionResult> Index(int? id)
+        {
+            ViewBag.Id = id;
+            var gs = new Towary
+            {
+                Towary_ = await _context.Towary.ToListAsync(),
+                SredniaCena = _context.Towary.Average(s=> s.Cena),
+                CalkowitaLiczbaTowarow = _context.Towary.Count()
+            };
+            return View(gs);
+        }

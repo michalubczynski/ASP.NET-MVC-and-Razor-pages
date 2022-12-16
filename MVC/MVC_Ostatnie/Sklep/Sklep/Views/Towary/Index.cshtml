@@ -1,0 +1,47 @@
+﻿@model Sklep.ViewModels.Towary
+@*IEnumerable<Sklep.Models.Towar>*@
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<table class="table">
+    <thead>
+        <tr>
+                Nazwa towaru
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <strong>Liczba Towarow</strong> @Model.CalkowitaLiczbaTowarow <strong> Srednia cena</strong> @Model.SredniaCena.ToString("#.##")
+        @foreach (var item in Model.Towary_) {
+            string styl = "background: grey";
+            if (item.TowarId == ViewBag.Id) { styl = "background : yellow"; }
+            
+            <tr style="@styl">
+            <td>
+                @Html.DisplayFor(modelItem => item.Nazwa)
+            </td>
+
+            <td>
+                <a asp-action="Index" asp-route-id="@item.TowarId">Zaznacz</a> 
+            </td>
+            </tr>
+
+
+}
+
+
+    </tbody>
+</table>
+@foreach (var item in Model.Towary_)
+{
+    if (item.TowarId == ViewBag.Id)
+    {
+        @item.Producent<br>
+        @item.Ilosc <strong>szt</strong><br>
+        @item.Cena<strong> zl</strong><br>
+    }
+
+}
