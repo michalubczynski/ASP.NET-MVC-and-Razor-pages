@@ -7,7 +7,15 @@
 7.Kontroler jest podstawow¹ jednostk¹ logiczn¹ naszego programu. Odpowiada m.in. za przetwarzanie danych pobranych za pomoc¹ modelu i przekazanie ich u¿ytkownikowi oraz zapisanie danych przez niego podanych (poprzez widok). W kontrolerze odbywaj¹ siê wszystkie konieczne obliczenia i podejmowane s¹ odpowiednie akcje w zale¿noœci od dzia³añ u¿ytkownika. |||| Z czego siê sk³ada, co w nim umieszczamy? ||||
 8.Widok reprezentuje to co widzi u¿ytkownik. Widok oddzielony od logiki pozwala na bezinwazyjn¹ zmianê grafiki w dowolnym momencie.
 9. Razor to sk³adnia znaczników umo¿liwiaj¹ca osadzanie kodu opartego na platformie . NET na stronach internetowych. Platforma Razor Pages jest preferowanym sposobem tworzenia aplikacji opartych na stronach lub formularzach w ASP.NET Core.
-10. NIE WIEM CO TO S¥ adnotacje do danych w modelu.
+10. Adnotacje danych w modelu to atrybuty, które definiuj¹ w³aœciwoœæ danego pola które nastêpnie w formularzu bêdzie sprawdzane pod k¹tem poprawnoœci wartoœci wzglêdem danego atrybutu (tak zwana walidacja).
+Przyk³adowe wykorzystanie:
+	[Key]
+	int UczenId {get; set;} do zdefiniowania klucza g³ównego tabeli 
+	[MaxLenght(20)]
+	string Nazwisko { get; set; } w celu ograniczenia pamieci do 20 znaków nazwiska
+	[Required]
+	string Grupa { get; set;} w celu zapewnienia ze osoba bedzie nalezec do ktorejs grupy
+	 
 11.Sterowanie dostêpem do akcji, odbywa siê poprzez autoryzacjê konkretnych ról b¹dŸ u¿ytkowników, do wyœwietlania uprzednio zdefiniowanych widoków.Istotne jest dodanie atrybutu [Authorize] przed klas¹ kontrolera. Autoryzacjê przydzielamy konkretnym osobom b¹dŸ rolom poprzez atrybuty jak: [AllowAnonymous] public IActionResult TylkoAnon(){ return View();} [Authorize(Roles="Admini,Kierownictwo")] public IActionResult TylkoWazni(){ return View();} 
 12.Umo¿liwienie u¿ytkownikowi wprowadzenia kodu skryptowego, który bêdzie bez zmian przes³any do przegl¹darki innego u¿ytkownika. Jedn¹ z mo¿liwoœci zabezpieczenia siê jest enkodowanie HTML ca³ej zawartoœci.
 13.Wykonanie kodu z uprawnieniami innego internauty.Atak polegajacy na zmuszeniu przegl¹darki ofiary do wykonania pewnej nieautoryzowanej akcji (wykonania requestu HTTP). Zabezpieczenia na tego typu ataki stosuje sie poprzez generowanie page-tokenów b¹dŸ per-session tokenów antiCSRF i sprawdzanie ich poprawnosci poprzez strone obslugujaca formularz. Form¹ zabezpieczeñ jest zakaz dostêpu do cookies z poziomu js.
@@ -18,4 +26,6 @@
 18.Code First - podejœcie projektowe, w którym zaczynamy pracê od napisania kodu a nie oparcia aplikacji na istniej¹cej ju¿ bazie danych|| Database first - Korzystaj¹c z mechanizmu in¿ynierii wstecznej tworzymy klasy encji i kontekstu na podstawie istniej¹cego schematu bazy danych.
 19. Programista nie zawraca sobiê g³owy tym co siê dzieje w tle. Spora iloœæ operacji jest wykonywana bez naszej ingerencji. ORM oferuje mo¿liwoœæ pracy z baz¹ danych nawet gdy programista nie jest wyspecjalizowany przy pracy z SQL. Bardzo dobrze wspó³pracuje z CRUD. Sprawia ¿e kod jest ³atwiejszy do utrzymania i aktualizacji.  Zwiêksza odpornoœæ na ataki SQL injection.
 20 MS entity framwork pozwala na: Wykonywanie podstawowych operacji CRUD.£atwe zarz¹dzanie relacjami 1-1, 1-? oraz ?-?. Tworzenie relacji dziedziczenia pomiêdzy encjami. || Umo¿liwia deweloperom pracê z danymi w postaci obiektów i w³aœciwoœci specyficznych dla domeny, takich jak klienci i adresy klientów, bez koniecznoœci samodzielnej pracy z bazowymi tabelami i kolumnami bazy danych -- (to takie bardzo wikipediowe)
->>>>>>> 437b44eae8dd6daee38bbbf0f5f79cbbc64fb030
+21. Do kodowania stron najczeœciej wykorzystywany UNICODE UTF-8
+22. Post i Get 
+23. Regular expresion to wzorzec który opisuje okreœlony tekst do wyszukiwania. Za pomoc¹ odpowiedniej sk³adni, znaków jak i kwantyfikatorów jesteœmy w stanie okreœliæ jaki tekst jest przez nas po¿adany.
